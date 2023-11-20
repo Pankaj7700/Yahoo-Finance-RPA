@@ -1,0 +1,184 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchForCompanyCode" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_SearchCode" Type="InArgument(x:String)" />
+    <x:Property Name="in_URL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>599,1892</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SearchForCompanyCode_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchForCompanyCode" sap:VirtualizedContainerService.HintSize="546,1827" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Yahoo Finance - Stock Market Live, Quotes, Business &amp; Finance News" sap:VirtualizedContainerService.HintSize="484,1716" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fabc020f-f417-4a25-bb83-610997a7c244" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1499" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Searching For Company Code: &quot;+in_SearchCode]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Search for Company" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Text="[in_SearchCode]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/" CvElementArea="284, 121, 563, 37" CvTextArea="297, 132, 268, 18" CvTextArgument="Search for news, symbols or companies" CvType="InputBox" DesignTimeRectangle="287, 166, 557, 35" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT yfin-usr-qry'" FullSelectorArgument="&lt;webctrl id='yfin-usr-qry' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='yfin-usr-qry' tag='INPUT' type='text' class='Bgc(t) Bd Bdrsbstart(2px)! Bdc(#b0b0b0) Bdendw(0) Bdrs(0) Bdrststart(2px)! Bxsh(n) Bxz(bb) D(b) Fz(15px) H(inh) M(0) O(0) Px(10px) W(100%) Bdc($c-fuji-blue-1-c):f Bdc(#949494):h finsrch-inpt' aaname='Search' /&gt;" Guid="4bfbfc79-3d55-4487-baec-9c3cfd7eda71" InformativeScreenshot="d8598081845778d956228ea9da92029c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance News' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="855, 186, 55, 13" CvTextArgument="Personal" CvType="Text" DesignTimeRectangle="844, 166, 90, 35" ElementType="Button" FriendlyName="'BUTTON header-desktop-s…'" FullSelectorArgument="&lt;webctrl id='header-desktop-search-button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='header-desktop-search-button' tag='BUTTON' type='submit' class='Bgc($c-fuji-blue-1-b) Bd(n) Bdrsbend(2px) Bdrstend(2px) D(b) H(100%) M(0) P(0) rapid-noclick-resp W(100%) Bgc($actionBlueHover):h submit-btn finsrch-btn' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON header-desktop-s…'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/" DesignTimeRectangle="844, 166, 90, 35" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON header-desktop-s…'" FullSelectorArgument="&lt;webctrl id='header-desktop-search-button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='header-desktop-search-button' tag='BUTTON' type='submit' class='Bgc($c-fuji-blue-1-b) Bd(n) Bdrsbend(2px) Bdrstend(2px) D(b) H(100%) M(0) P(0) rapid-noclick-resp W(100%) Bgc($actionBlueHover):h submit-btn finsrch-btn' aaname='' /&gt;" Guid="8c079a00-6ea1-4f7d-888a-e2261f9210dd" InformativeScreenshot="f73e3c28c403e2a797f834d1145ca1a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance News' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="287, 166, 557, 35" ElementType="InputBox" FriendlyName="'INPUT yfin-usr-qry'" FullSelectorArgument="&lt;webctrl id='yfin-usr-qry' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='yfin-usr-qry' tag='INPUT' type='text' class='Bgc(t) Bd Bdrsbstart(2px)! Bdc(#b0b0b0) Bdendw(0) Bdrs(0) Bdrststart(2px)! Bxsh(n) Bxz(bb) D(b) Fz(15px) H(inh) M(0) O(0) Px(10px) W(100%) Bdc($c-fuji-blue-1-c):f Bdc(#949494):h finsrch-inpt' aaname='Search' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Historical Data'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/%5EDJI?p=%5EDJI" CvTextArea="335, 420, 91, 13" CvTextArgument="Historical Data" CvType="Text" DesignTimeRectangle="336, 419, 90, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Historical Data'" FullSelectorArgument="&lt;webctrl aaname='Historical Data' parentid='quote-nav' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Historical Data' parentid='quote-nav' tag='SPAN' type='' class='' check:innerText='Historical Data' /&gt;" Guid="83acade4-0258-4755-a3ca-8ed99052d8eb" InformativeScreenshot="92732ed8e26162b32b9b3c80b92e9dc4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dow Jones Industrial Average (^DJI) Charts, Data &amp;amp; News - Yahoo Finance' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click to Change Time Period" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/NVDA/history?p=NVDA" CvElementArea="354, 293, 16, 16" CvTextArea="163, 293, 188, 15" CvTextArgument="Nov 18, 2022 - Nov 18, 2023" CvType="ArrowButton" DesignTimeRectangle="164, 291, 203, 17" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Nov 18,'" FullSelectorArgument="&lt;webctrl aria-role='button' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' type='' tag='DIV' class='Pos(r) D(ib) C($linkColor) Cur(p)' aaname='' check:innerText='Nov 18, 2022 - Nov 18, 2023' /&gt;" Guid="5faa1e64-c9af-4bfc-b764-4f8da8241e5c" InformativeScreenshot="d25e740d679cbcd35c3ee152dc2fa935.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NVIDIA Corporation (NVDA) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="83, 284, 284, 30" FriendlyName="'Time Period:Nov'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='D(ib) Py(6px) Mend(40px) Mend(10px)--tab768 smartphone_Mend(0px)' aaname='' check:innerText='Time Period:Nov 18, 2022 - Nov 18, 2023' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1Y'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/NVDA/history?p=NVDA" CvElementArea="232, 363, 47, 31" CvTextArea="247, 371, 18, 13" CvTextArgument="1Y" CvType="Button" DesignTimeRectangle="234, 364, 45, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'1Y'" FullSelectorArgument="&lt;webctrl aaname='1Y' parentid='dropdown-menu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1Y' parentid='dropdown-menu' tag='BUTTON' type='' class='Py(5px) W(45px) Fz(s) C($tertiaryColor) Cur(p) Bd Bdc($seperatorColor) Bgc($lv4BgColor) Bdc($linkColor):h Bdrs(3px)' check:innerText='1Y' /&gt;" Guid="5ac5d3df-7598-450b-8442-99efe33c469b" InformativeScreenshot="be6cc7b78dabcd2c21f7a6bd73a28eb0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NVIDIA Corporation (NVDA) Stock Historical Prices &amp;amp; Data - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="248, 370, 16, 16" ElementType="Text" FriendlyName="'1Y'" FullSelectorArgument="&lt;webctrl aaname='1Y' parentid='dropdown-menu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1Y' parentid='dropdown-menu' tag='SPAN' type='' class='' check:innerText='1Y' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVDhP7ZGxC4JAFIf7P12EcHFxCEICh5aGoiFosC1aG1ysVaiWBiGIljZxCErIIxRp+fWMimfWkNbW8HF3v3t8vHtXiZIzvslfWJ63wjAQCGOWnQQOe5GpuSIoD6LHOS/cb2B3dMjVJmyP5ccZekoNQ5dlSQCnpcKw/EeWFfoTGIqO7qAP7VlIeFYTUmMC73YOlyYUbYQ1e0lWKALsBK0eiV8Io3iDoaai59DT4y3G9due1bye4TshcXD6kKmr+bQNmXV752NhlPiwGyqkKs1zlb8vICQWJiTdynWXUkxIn8E/h/Nj4VWUzodjwuU1KR93WIK/sCxnXADa+tsTpF5kzwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fabc020f-f417-4a25-bb83-610997a7c244" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/quote/NVDA/history?p=NVDA" CvElementArea="872, 343, 19, 19" CvTextArea="893, 345, 60, 13" CvTextArgument="Download" CvType="Icon" DesignTimeRectangle="874, 344, 79, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Download'" FullSelectorArgument="&lt;webctrl aaname='Download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Download' tag='A' type='' class='Fl(end) Mt(3px) Cur(p)' check:text='Download' /&gt;" Guid="6db98280-f178-45e0-89f5-49f904616a0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAVCAYAAAA6s9JxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPySURBVFhH7VdNa9tYFJ1/0M3Q6e/wyjuvshkoWRgTsjCYQsmUjttCQgmhUNKvZBFcCJTQkEAhdBEYxv0whMCEtMW04JIJmUXrIRCwZMlWqsRI48aIGE7v1Xu25MatZXAyw6ADQnpf99133rn3Pf2AEANDSOYAEZI5QIRkDhAhmQNETzKrFvBzRrz7gwPHqsOWj9OU1WeM8qaGR3/YsjQ4dLPbk8ySCZy7It794QCZ4RIivid2VUN2ty7bzwY7CyWkc30roSe62T11MjPbstj8B8VcGfFhheqOZOXp4/9Jpotj7K0qiKSrKMsaqJ+QuaUgxspNqVgqyNDZqyI9XsWeKMHOaxhdNCl5COysKJhap8WY+7gzriOb05BKUgSMKJh4euj161i0g/IbHRMpESnxWzoKRqunhbV7KuIjvjbzWLbRyF0Ds+kSotSWmjOwMvOvk0koVTE6rGKN7R3uYyqhYPaNRTmVciwRO3uphNk8KbdJ4xMqsjoPqmNjmhaZ0FBocLmG1V8UrJbo0zCQJntL22zjGA7ZT5P63TaCn0x7s4zoJQ15le0fEbEa4mQzz5nHsVAsWrDrDTgNG4UF2vTpfbhbe8JPE5mr/wUy5eKzBokqpyIy96mtIoZDCoxMGjDRQH6uhKlNWmmDSE7qyFA5s01qYRvJCoo8wLWnY8cdzbCQveHN65FJ9Td5o9zdkBBzpNe6HFBb5Ie0283PwGH+kdTw46/Aa/LWT+YrKnP93xXZ8bvorUx2aOx5p0PY1tuLYCW5i6C6+JOaS/TF5UOhsIUD0b8bmUTaSTLZn5bSPXB7xLXlwCxUMDWuYChBYe6mAmG3m5+ByWRMPwMuXAee/SnI5DeX7z6XHXqiG5mdOdP9nv9K8qyIG4bIqRReExSGmXmpSJ9C2woLTCanBqrf8vIg+1Mg20yU805DNKlhQ5d2fZtafNIi3ENfZDIebwI/XRNknk8Di69kQyD4yHQ+wzZqyC+riFHuWfpLOqxWkeK8qMoAahIRk34nBTGRBC3KvafK3DlcxkarS2Ay6W74u4IopZBy686r0lien1POGoXybZkjiWRznaKiZfdDBRc5t1pyI6waVmiOvshk/PZeEPqiQ2FBIMhs3TGjSQVj9yq+05NBTud1pOgEjaXEiT62bML0XfBZvdGH3inuhn570YQ+yETTRv6RmMcN4xE6uLakpfoBluhQYT9H6VYwMU+3h7bdIxSfkhBo3BCNi13WsLqo9k8mo/ZZfpwaxN/Smf0l0UluW93uunQbqNMfm+NPBT7wODrtv4UOMt/uAjO54A/3D+Ghg8z7L8V/eNDnAfUP4SFQmIcIhpDMASIkc2AAvgDAu+oC4YvJVQAAAABJRU5ErkJggg==" InformativeScreenshot="5afadd15944e11cb6fac2798eb27f111.png" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://finance.yahoo.com/*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJdSURBVFhHY0hgvPR/IPGoA0YdMHwdUKN36/+TK99R8Lq6FxjqaOaAY0ve/UcHzZZ3MNTRxAEF0tf+//71D2otBDw49w2rWpo4YEvHK6i1CDAz5hFWtVR3QBr35f9f3v2BWgsB757++p/Mil09VgfcPvYFqhUCDs55i6FmfcMLqCwE3DnxFSy+OOcpVAQBVlU8x9APw1gdMCXkAVQrBPz4+vd/psAVuHwSyyWwr5DBtIiH/xOZLv1/cfsHVAQCfnz5+z9L8CqK+cgYqwMSmS/9f33/J9QICFia/xQuj+7Ad09+gR01MQBVHAT2THmDYjY6xpkGlhagBuWz69/hctf2fYaKQsDqSkgQ3ziEGnV///77X6ZyA64PG8bpgAzeK/+/fURNTB2Od/9Xat6E8iDg57e//7OFr/5P5bwMDn5kfGAWZtpBxzgdAMLbe1Cz06nVH/7vnvQayoMAZEtAjk5hv4xiBiGM1wFFctf///mNKFBA7G+fUEOlSvvm/xyRq/8v7fj0/9+/f2A1IEdiMw8bxusAED6x4j3UKkxwedcnsJojCzGL3emRDzHMwoYJOqDR7DbUSEzQ530frObJ1e9QEQTY2IRZ8WDDBB0AwreOoKZuEHh+8wdcfs/UN1BRCABFRYs1ZsWDDRPlgMlBmPl7UfYTuDyo+N077c3/Nw9//n94/hu4UELWjw8T5YB+n/tQayHg64c//9N5ECUjJZgoB6AXPKDsiU0dOZigA2oNbkGthYC/f/79L1a4jlUtOZigA44uQs1ip9d+wKqOXExUFNASjzpg1AED7IBL/wEEb/bMxqNS/AAAAABJRU5ErkJggg==" InformativeScreenshot="62ba0928ec84a80c4c3363f4d4ce7b8a.jpg" Selector="&lt;html app='chrome.exe' title='Yahoo Finance - Stock Market Live, Quotes, Business &amp;amp; Finance News' /&gt;" Title="NVIDIA Corporation (NVDA) Stock Historical Prices &amp; Data - Yahoo Finance" Url="[in_URL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
